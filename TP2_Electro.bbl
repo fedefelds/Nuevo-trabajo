@@ -1,0 +1,39 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Ruffa}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ruffa}{R.}%
+     {Francisco}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Universidad Nacional de Tres de Febrero}%
+  }
+  \strng{namehash}{RF1}
+  \strng{fullhash}{RF1}
+  \field{title}{Electroac{\'u}stica I}
+  \field{year}{2017}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

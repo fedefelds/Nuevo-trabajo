@@ -1,0 +1,375 @@
+\documentclass[]{article}
+%\documentclass[journal,10pt,draftclsnofoot,onecolumn]{IEEEtran}
+%\usepackage{graphics,multirow,amsmath,amssymb,textcomp,subfigure,multirow,xspace,arydshln,cite}
+
+\usepackage[]{graphicx}   % para manejar graficos
+
+\usepackage[space]{grffile} % para manejar graficos
+
+\usepackage{caption}
+
+\usepackage{enumerate}    % para hacer listas numeradas
+
+\usepackage{amsmath}        % no se..
+
+\usepackage{amsfonts}     % no se..
+
+\usepackage{authblk}    % para definir las afiliaciones de cada autor
+
+\usepackage{layout}     % no se..
+
+\usepackage[sorting=none,backend=bibtex]{biblatex}   % para manejar la bibliografia / referencias
+
+\usepackage{lipsum}     % para generar texto random
+
+\usepackage{multicol}   % para usar dos columnas
+
+\usepackage{palatino}   % para que la fuente sea palatino
+
+\usepackage[utf8]{inputenc} % para poder usar tildes
+
+%\DeclareUnicodeCharacter{0301}{´} % para poder usar ``tildes externas''
+
+\usepackage[spanish]{babel} % para escribir en español
+
+\usepackage{csquotes}
+
+\addto\captionsspanish{\def\tablename{Tabla}} % cambiar ``cuadro'' por ``Tabla''
+
+\usepackage[sc,big,raggedright,bf]{titlesec} % para definir el formato del header de cada seccion.
+
+\usepackage[font=small]{caption} % para que la fuente de un epigrafe no tenga el mismo tamaño que el cuerpo del texto
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ textwidth={17cm},
+ textheight={23cm},
+ left={2cm},
+ top={2.5cm},
+ }
+
+\setlength{\columnsep}{1cm} % para que la separacion entre columnas sea de 1 cm
+
+\graphicspath {{imagenes/}}
+
+\defbibheading{bibliography}{\section{\refname}} % para que bibtex no imponga su header cuando uso \printbibliography, y que se use el de babel
+
+\addbibresource{bibliografia.bib} % para importar el archivo .bib
+
+\title{\textbf{\LARGE{\textsf{MEDICIÓN DE ESPECIFICACIONES DE PARLANTES}}}}
+ % defino el titulo del Paper
+
+\date{} % lo pongo vacio para que no aparezca abajo del abstract
+
+\newcommand{\figura}[3]{
+\vspace{0.2 cm}
+\begin{figurehere}
+\centering
+\includegraphics[width=\linewidth]{#1}
+\captionof{figure}{#2}
+\label{#3}
+\end{figurehere}
+\vspace{0.2 cm}
+}
+
+
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/multicol_hint.html
+\makeatletter           % esto lo uso para poder definir figuras
+\newenvironment{tablehere}    % esto lo uso para poder definir figuras
+  {\def\@captype{table}}    % esto lo uso para poder definir figuras
+
+  {}              % esto lo uso para poder definir figuras
+                  % esto lo uso para poder definir figuras
+\newenvironment{figurehere}   % esto lo uso para poder definir figuras
+  {\def\@captype{figure}}   % esto lo uso para poder definir figuras
+  {\par\medskip}
+  {}              % esto lo uso para poder definir figuras
+\makeatother          % esto lo uso para poder definir figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               ACA EMPIEZA EL DOCUMENTO                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\renewcommand{\headrulewidth}{0pt} % para que no haya linea decorativa en el header.
+
+
+\author[1]{Nombre y Apellido} % defino el autor
+\affil[1]{Universidad Nacional de Tres De Febrero, Buenos Aires, Argentina \newline \texttt{email@delautor.com}} % afiliacion del autor
+
+
+\begin{minipage}[h]{\textwidth} % uso el entorno minipage para que el abstract este en la misma pagina que el titulo
+    \maketitle
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \rhead{Fecha de entrega}
+    \lhead{Materia/Congreso}
+    \cfoot{\thepage}
+
+\end{minipage}
+
+
+\begin{abstract}
+
+\textit{\lipsum[1]}
+
+\end{abstract}
+
+\vspace{1.5cm}% Additional space between abstract & rest of document
+
+\begin{multicols}{2}
+\section{Introducción}
+En este trabajo se describen las mediciones realizadas en el marco de la materia
+Electroacustica I.Las mediciones son conducidas segun dos metodos: Un método ``Clásico'' y otro metodo
+moderno. Se pretende caracterizar dos parlantes en funcion de sus especificaciones.
+Dichas especificaciones son:
+\begin{itemize}
+  \item Impedancia
+  \item Sensibilidad
+  \item Respuesta en frecuencia
+  \item Parametros de Thiele y Small
+  \item{Directividad}
+\end{itemize}
+
+Los parlantes medidos son los modelos BC 6MD38 y 18TBX100-8, de 6,5 y 18
+pulgadas respectivamente.
+\section{Metodologia}
+En la siguiente seccion se detalla la metodologia adoptada para las distintas
+mediciones llevadas a cabo en este trabajo.
+
+\subsection{Medición de Impedancia}
+
+\subsubsection{Método moderno}
+\label{subsec: z moderno}
+Para dicha medicion se empleo el paquete de software abierto Room EQ Wizard, tambien
+conocido como REW. Dicho software requiere de un conexionado especifico, el cual
+fue implementado mediante una solucion de Hardware diseñada a medida, resultando
+en mayor agilidad a la hora de medir esta especificacion.
+
+El arreglo instrumental utilizado es muy similar al descrito mas adelante,
+% en la seccion \ref{subsec: freq response}
+
+\subsubsection{Método clásico}
+Para dicha medicion se emplea el metodo de la corriente constante detallado en \cite{Ruffa}
+Dicho metodo consiste en conectar un resisteor de alto valor, entre 1 k$\Omega$ y
+2 k$\Omega$, en serie con el parlante y medir la caida de tension en el mismo.
+El valor relativamente alto del resistor asegura una corriente constante en el
+circuito, por lo que la variacion de la tension sobre el parlante con la frecuencia
+quedara reflejada directamente en el cambio de impedancia del parlante.
+
+Medimos la resistencia electrica de la bobina $R_e$ y $R$ con
+la mayor precision posible. Luego, se conecta el instrumental segun la figura
+% \ref{fig:setup_impedancia} :
+%
+% \figura
+% {setup impedancia}
+% {Arreglo instrumental utilizado para medir impedancia de un altoparlante}
+% {fig:setup_impedancia}
+
+Para permanecer en un regimen de operacion lineal, la tension de salida del
+amplificador es ajustada a no mas de 2 Volts RMS.
+Tambien se mide la tension sobre el resistor $V_R$ y se verifica que la misma no varie
+significativamente dentro del rango de frecuencias que va desde 20 Hz hasta
+500 Hz
+
+La corriente en el circuito $i_p$ esta dada por la siguiente ecuacion:
+\begin{equation}
+  I_p=\frac{V_R}{R}
+\end{equation}
+Para medir la impedancia del altoparlante en una frecuencia dada, se ajusta la
+frecuencia del generador en dicha frecuencia y se mide la tension en los bornes
+del altoparlante $V_p$. El valor absoluto de la impedancia del parlante en
+dicha frecuencia esta dada por:
+\begin{equation}
+  |Z|=\frac{V_p}{I_p}
+\end{equation}
+
+
+
+\subsection{Medicion de Sensibilidad}
+
+Se genera ruido rosa a un nivel determinado el cual permita desarrollar 1 Watt
+de potencia eficaz sobre la impedancia nominal indicada en las especificaciones
+del parlante.
+
+Una vez hallado dicho nivel, el sonometro es colocado a 1 metro de distancia del
+parlante. Para medir la sensibilidad del parlante, se mide el nivel de presion
+sonora en dicha posicicion.
+
+
+
+\subsection{Medicion de Respuesta en frecuencia}
+Para dicha medición solamente se recurrio al metodo moderno. Se coloca un
+microfono de medicion a una distancia de 1 metro del altoparlante.
+Por medio de una computadora y una placa de audio se genera ruido rosa.
+Para compensar la respuesta en frecuencia de dicha placa se recurrió a un lazo
+de realimentacion. La señal captada por el microfono de medicion fue procesada
+mediante el paquete SMAART V7.
+\label{subsec: freq response}
+
+% \figura
+% {setup realimentacion}
+% {Arreglo experimental utilizado para la medicion de respuesta en frecuencia}
+% {feedback}
+
+
+\subsection{Medicion de los parametros de Thiele y Small}
+\subsubsection{Método clásico}
+En primer lugar, el parlante se  suspende en espacio libre lejos de cualquier superficie
+reflectante. Luego se mide con la mayor precision posible la resistencia de la
+Bobina movil $R_e$ y el valor de una resistencia conocida $R_{lim}$.
+Dicho reststor se conecta en serie con el parlante a medir. Este ultimo puede
+considerarse una impedancia.
+
+Se conecta el generador en serie a este circuito y de esta manera se obtiene un
+divisor resistivo. Para que la impedancia del generador no resulte problematica
+en la medicion, se uso una potencia de audio con baja impedancia de salida. De
+esta manera, la tension en la salida de la potencia es considerada como la
+tension del generador.
+
+% Se conecta el osciloscopio segun la figura \ref{fig:setup_lissajous}.
+Dicha conexion permite medir con gran precision el valor de la frecuencia
+de resonancia electrica del parlante, $f_s$, mediante el uso de las figuras de
+Lissajous. Dichas figuras permiten medir el defasaje del canal 1 respecto al
+canal 2. Cada una de las señales permiten deflectar el rayo de electrones de
+manera horizontal o vertical respectivamente. Cuando la frecuencia del generador
+de señales es igual a $f_s$, las partes reactiva de la impedancia del parlante
+se anulan entre si, por lo que la impedancia del parlante vista por el generador
+es puramente resistiva. Por lo tanto, en resonancia la tension a traves de
+$R_{lim}$ estara en fase a la tension en los bornes del altoparlante, $V_{a}$.
+
+
+% \figura
+% {setup lissajous}
+% {Arreglo instrumental utilizado para medir $f_s$}
+% {fig:setup_lissajous}
+
+Para medir $f_s$, primero se ajusta la tension de salida del generador a un valor
+conocido $V_g$. Se varia la frecuencia del generador hasta visualizar una linea
+recta. Dicha figura indica que la frecuencia del generador
+es $f_s$. Con un miltimetro digital se mide la frecuencia de resonancia
+$f_s$ y la tension en el altoparlante en resonancia $V_s$.
+
+En función de las magnitudes medidas, se define $r_o$, como la relacion entre
+la impedancia a resonancia y la resistencia de la bobina movil $R_e$:
+\begin{equation}
+  r_{o}=\frac{R_{lim} \cdot V_s}{Re \cdot (V_g-V_s)}
+  \label{eq:ro}
+\end{equation}
+
+Luego se calcula el valor de $V_r$ dado por:
+
+\begin{equation}
+V_r = V_g \cdot \frac{\sqrt{r_0} \cdot R_e }{\left(\sqrt{r_0} \cdot R_e \right) + R_{lim}}
+\end{equation}
+Cuando $V_a=V_r$ se cumple que la frecuencia del generador es igual a $f_1$ o
+ $f_2$  y se cumple la siguiente relacion:
+
+\begin{equation}
+  f_1 \cdot f_2 = f_s^2
+  \label{eqf1f2}
+\end{equation}
+
+El cumplimiento de la ecuacion
+% \ref{eqf1f2}
+ implica que en una escala logaritmica
+la curva de impedancia es simetrica.
+
+Se fija la frecuencia del generador en $f_s$ y se le hace un pequeño ajuste
+para lograr la condicion $V_a=V_r$ para valores mayores y menores a $f_s$
+
+Con los valores obtenidos de $f_1$ y $f_2$, se verifica el cumplimiento de la
+siguiente relacion:
+\begin{equation}
+  f_s=\sqrt{f_1\cdot f_2}
+  \label{eq:verificacion}
+\end{equation}
+El valor de $f_s$ obtenido mediante la ecuacion \ref{eq:verificacion} no debe
+diferir mas de 2 Hz del valor medido.
+Conociendo $f_1$, $f_2$ y $r_0$, es posible calcular los Parametros de Thiele y
+Small. Para dichos calculos se emplea una hoja de calculo.
+
+% EXPLICAR MEDICION DE MMD
+\subsubsection{MÉTODO MODERNO}
+Dicha medición puede realizarse con el mismo software utilizado en
+
+% \ref{subsec: z moderno}
+
+para la medición de la impedancia del equipo, según el
+método moderno. Por lo tanto, para dicha medición se utiliza el mismo
+arreglo instrumental.
+
+El software utilizado requiere el ingreso de ciertos parametros mas simples
+de medir. Tales son: La resistencia electrica de la bobina $R_e$, el peso de
+la masa agregada, la temperatura, la presión y el area efectiva del diafragma.
+Esta última esta dada por:
+
+\begin{equation}
+a=\pi \cdot \left( \ \frac{d}{2} \ \right)^2
+\end{equation}
+Donde d es el diametro efectivo del diafragma.
+
+Se realizaron dos mediciones según las indicaciones de este método. En la
+primera se midio al altoparlante solo y en la segunda se midio el altoparlante
+con una masa agregada cuyo peso es conocido.
+
+\subsection{Medición de la directividad}
+En el caso de dicha medición, solamente se estudia el parlante BC 6MD38.
+% \figura
+% {setup directividad}
+% {Arreglo experimental utilizado. Notese la similaridad con el arreglo presentado
+% en la figura \ref{feedback}}
+% {fig: directividad}
+
+
+En este caso, el parlante se coloca sobre una superfice giratoria diseñada para
+este tipo de mediciones. Luego, para minimizar el efecto de las reflexiones laterales
+se coloca un microfono de referencia lo mas lejos posible de las paredes.
+Se realizan 7 mediciones, con los siguientes ángulos: 0$^\circ$, 15$^\circ$,
+30 $^\circ$, 45 $^\circ$, 60$^\circ$, 75$^\circ$ y 90$^\circ$. Para cada una se
+emite un sweep. Se asume directividad en la simetria.
+
+La señal obtenida por el microfono de referencia luego es procesada
+en Python y MATLAB para asi obtener la directividad en tercios de octava, normalizada
+respecto a 0 $^\circ$
+\section{Resultados}
+a
+% 6
+% Impedancia
+% Sensibilidad
+% Respuesta en frecuencia
+% Th y S
+% 18
+% Impedancia
+\section{Impedancia}
+La medición de impedancia según el método clásico dio como resultado
+los siguientes valores:
+\section{Sensibilidad}
+b
+\section{Respuesta en frecuencia}
+c
+\section{Thiele y Small}
+
+
+
+
+\section{Análisis de resultados}
+
+\section{Conclusión}
+
+
+\printbibliography
+
+\end{multicols}
+
+
+
+
+
+\end{document}
