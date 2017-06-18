@@ -73,6 +73,16 @@
 \vspace{0.2 cm}
 }
 
+\newcommand{\tabla}[4]{
+\begin{tablehere}
+\begin{center}
+\begin{tabular}{#1}
+#2
+\end{tabular}
+\caption{#3}
+\label{#4}
+\end{center}
+\end{tablehere}}
 
 \usepackage{fancyhdr}
 \usepackage{hyperref}
@@ -350,6 +360,7 @@ a
 \section{Impedancia}
 La medición de impedancia según el método clásico dio como resultado
 los siguientes valores:
+% Frecuencia & Sensibilidad [mV] & Sensibilidad [dB] \\
 \section{Sensibilidad}
 b
 \section{Respuesta en frecuencia}
