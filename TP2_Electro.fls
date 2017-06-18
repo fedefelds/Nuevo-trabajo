@@ -265,6 +265,12 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 INPUT ./imagenes/setup directividad.png
 INPUT ./imagenes/setup directividad.png
 INPUT ./imagenes/setup directividad.png
+INPUT ./imagenes/impedancia 6MDN38-8.png
+INPUT ./imagenes/impedancia 6MDN38-8.png
+INPUT ./imagenes/impedancia 6MDN38-8.png
+INPUT ./imagenes/rta en frecuencia 6MDN.png
+INPUT ./imagenes/rta en frecuencia 6MDN.png
+INPUT ./imagenes/rta en frecuencia 6MDN.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplri7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/palatino/pplri7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/palatino/pplri8r.tfm

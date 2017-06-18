@@ -83,7 +83,6 @@
 \caption{#3}
 \label{#4}
 \end{center}
-\end{tablehere}}
 \end{tablehere}
 \vspace{0.3 cm}
 }
@@ -219,6 +218,7 @@ sonora en dicha posicicion.
 
 
 \subsection{Medicion de Respuesta en frecuencia}
+\label{sec: fresp}
 Para dicha medición solamente se recurrio al metodo moderno. Se coloca un
 microfono de medicion a una distancia de 1 metro del altoparlante.
 Por medio de una computadora y una placa de audio se genera ruido rosa.
@@ -361,19 +361,67 @@ a
 % Th y S
 % 18
 % Impedancia
-\section{Impedancia}
-La medición de impedancia según el método clásico dio como resultado
-los siguientes valores:
-% Frecuencia & Sensibilidad [mV] & Sensibilidad [dB] \\
-\section{Sensibilidad}
-b
-\section{Respuesta en frecuencia}
-c
-\section{Thiele y Small}
+\subsection{Impedancia}
+Tal como era de esperar, la medición de impedancia segun el método clásico
+resulta muy laboriosa y poco precisa en comparacion con el método digital.
+Por lo tanto, resulta imposible obtener la misma
+cantidad de puntos de mediciones que en el método moderno.
+El pico de impedancia se del BC 18TX100 se encuentra entre los 150 y 300 Hz.
+Tal es la incertidumbre, que se omiten los demas resultados de la medición de impedancia
+segun el método clásico y se presentan los resultados obtenidos con el método
+moderno a conticuación:
 
+\figura
+{impedancia 6MDN38-8}
+{Valores obtenidos en la medicion de impedancia del BC 6MDN38-8. La línea azul
+representa la curva de impedancia con masa agregada al diafragma.}
+{tab: 6MDN38-8}
+\subsection{Sensibilidad}
+La sensibilidad medida del BC 6MDN38-8 a según el procedimiento propuesto es
+de 96,2 dB SPL.
+\subsection{Respuesta en frecuencia}
+Tal como se indico en \ref{subsec: freq response}, la médicion de respuesta en
+frecuencia del BC 6MDN38-8 fue llevada a cabo según el método digital.
+Los resultados pueden verse en la figura \ref{fig: fresp}:
+\figura
+{rta en frecuencia 6MDN}
+{Valores obtenidos en la medicion de respuesta en frecuencia del BC 6MDN38-8.
+La línea azul corresponde a la medición con bafle simple}
+{fig: fresp}
+\subsection{Thiele y Small}
 
-
-
+\tabla
+{|c|c|c|}
+{
+\hline
+ & Método Clásico & Método moderno \\
+\hline
+$f_s$ [Hz] & 164 & 164,8 \\
+\hline
+$R_e$ [$\Omega$] & 4,9 & 5,1   \\
+\hline
+$Q_{ts}$  & 0,42 & 0,512 \\
+\hline
+$Q_{ms}$  & 4,49 & 4,66 \\
+\hline
+$Q_{es}$    & 0,46 & 0,575 \\
+\hline
+$V_{as}$ [L] & 2,43 & 2,16 \\
+\hline
+$S_d$ [cm$^2$] & 133 & 132,7 \\
+\hline
+$\eta$ [\%{}] & 1,13 & 1,71 \\
+\hline
+$M_{md}$ [g] & 9,43 & 10,35 \\
+\hline
+$Bl$ [$T \cdot m$] & 15,7 & 9,852 \\
+\hline
+$C_{ms}$ [$\frac{mm}{N}$] & 0,099 & 0,086 \\
+\hline
+}
+{Comparacion de los parametros de Thiele y Small obtenidos mediante ambos métodos}
+{tab: tys}
+\subsection{Directividad}
 \section{Análisis de resultados}
 
 \section{Conclusión}
