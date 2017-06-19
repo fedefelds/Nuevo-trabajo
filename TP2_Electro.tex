@@ -63,14 +63,14 @@
 \date{} % lo pongo vacio para que no aparezca abajo del abstract
 
 \newcommand{\figura}[3]{
-\vspace{0.2 cm}
+% \vspace{0.2 cm}
 \begin{figurehere}
 \centering
 \includegraphics[width=\linewidth]{#1}
 \captionof{figure}{#2}
 \label{#3}
 \end{figurehere}
-\vspace{0.2 cm}
+% \vspace{0.2 cm}
 }
 
 \newcommand{\tabla}[4]{
@@ -169,6 +169,7 @@ El arreglo instrumental utilizado es muy similar al descrito mas adelante,
 en la seccion \ref{subsec: freq response}
 
 \subsubsection{Método clásico}
+\label{z clasica}
 Para dicha medicion se emplea el metodo de la corriente constante detallado en \cite{Ruffa}
 Dicho metodo consiste en conectar un resisteor de alto valor, entre 1 k$\Omega$ y
 2 k$\Omega$, en serie con el parlante y medir la caida de tension en el mismo.
@@ -203,6 +204,9 @@ dicha frecuencia esta dada por:
   |Z|=\frac{V_p}{I_p}
 \end{equation}
 
+Se puede ver que dicho método resulta bastante laborioso en casos en los que se
+busca obtener una gran cantidad de puntos de medición. Por lo tanto, solamente
+se tomaron hasta 15 puntos por parlante siguiendo este método.
 
 
 \subsection{Medicion de Sensibilidad}
@@ -358,12 +362,13 @@ a
 % Impedancia
 % Sensibilidad
 % Respuesta en frecuencia
+% Directividad
 % Th y S
 % 18
 % Impedancia
 \subsection{Impedancia}
-Tal como era de esperar, la medición de impedancia segun el método clásico
-resulta muy laboriosa y poco precisa en comparacion con el método digital.
+Tal como se indica indica \ref{z clasica}, la medición de impedancia segun el
+método clásico resulta muy laboriosa y poco precisa en comparacion con el método digital.
 Por lo tanto, resulta imposible obtener la misma
 cantidad de puntos de mediciones que en el método moderno.
 El pico de impedancia se del BC 18TX100 se encuentra entre los 150 y 300 Hz.
@@ -389,6 +394,8 @@ Los resultados pueden verse en la figura \ref{fig: fresp}:
 La línea azul corresponde a la medición con bafle simple}
 {fig: fresp}
 \subsection{Thiele y Small}
+La tabla \ref{tab: tys} presenta una comparacion de los parametros de Thiele y Small
+del BC 6MD38-8 medidos:
 
 \tabla
 {|c|c|c|}
@@ -422,7 +429,58 @@ $C_{ms}$ [$\frac{mm}{N}$] & 0,099 & 0,086 \\
 {Comparacion de los parametros de Thiele y Small obtenidos mediante ambos métodos}
 {tab: tys}
 \subsection{Directividad}
+Los resultados de la medicion de directividad del BC 6MMD38-8 son presentados en
+la figura \ref{fig: directividad}
+\figura
+{directividad}
+{Directividad del BC 6MMD38-8}
+{fig: directividad}
 \section{Análisis de resultados}
+En esta sección, se comparan los resultados obtenidos con los especificados por
+el fabricante.
+
+\subsection{Impedancia}
+La figura \ref{fig: z sheet} presenta la curva de impedancia provista por el
+fabricante del modelo 6MD38-8:
+\figura
+{z sheet}
+{Curva de impedancia provista por el fabricante}
+{fig: z sheet}
+% Sensibilidad
+% Respuesta en frecuencia
+% Directividad
+% Thiele y Small
+\tabla
+{|c|c|c|c|}
+{
+\hline
+ & Clásico & Moderno & Fabricante\\
+\hline
+$f_s$ [Hz] & 164 & 164,8 & 130 \\
+\hline
+$R_e$ [$\Omega$] & 4,9 & 5,1 & 5,7  \\
+\hline
+$Q_{ts}$  & 0,42 & 0,512 & 0,44 \\
+\hline
+$Q_{ms}$  & 4,49 & 4,66 & 3,7 \\
+\hline
+$Q_{es}$    & 0,46 & 0,575 & 0,49 \\
+\hline
+$V_{as}$ [L] & 2,43 & 2,16 & 3 \\
+\hline
+$S_d$ [cm$^2$] & 133 & 132,7 & 132 \\
+\hline
+$\eta$ [\%{}] & 1,13 & 1,71 & 1,4 \\
+\hline
+$M_{md}$ [g] & 9,43 & 10,35 & 12\\
+\hline
+$Bl$ [$T \cdot m$] & 15,7 & 9,852 & 10,5\\
+\hline
+$C_{ms}$ [$\frac{mm}{N}$] & 0,099 & 0,086 & NA \\
+\hline
+}
+{Comparacion de los valores obtenidos y los especificados}
+{tab: comparacion tys}
 
 \section{Conclusión}
 
