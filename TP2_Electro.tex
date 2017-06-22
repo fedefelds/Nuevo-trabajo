@@ -446,12 +446,57 @@ fabricante del modelo 6MD38-8:
 {z sheet}
 {Curva de impedancia provista por el fabricante}
 {fig: z sheet}
-% Sensibilidad
-% Respuesta en frecuencia
-% Directividad
-% Thiele y Small
+Se puede apreciar que la curva especificada por el fabricante es bastante similar
+a la presentada en la figura \ref{fig: 6MDN38-8}, obtenida siguiendo el método
+moderno.
+
+Según las mediciones realizadas, la primera y la segunda frecuencia de resonancia
+de dicho parlante es 169 Hz y 528 Hz respectivamente. Según el fabricante, la
+primer frecuencia de resonancia es 130 Hz.
+
+Tal como se indico antes, en cuanto al BC 18TX100, debido a la pobre cantidad de información recopilada
+no es posible brindar una caracterización precisa de la curva de impedancia. Según los especificaciones
+del fabricante, el resultado obtenido difiere por un exceso de 8,3 Hz.
+
+
+Por otro lado, es evidente el
+efecto de agregar una masa al diafragma apreciable en la figura \ref{fig: 6MDN38-8} :
+En comparación con el diafragma sin masa agregada,
+la frecuencia de resonancia es desplazada hacia la derecha y el máximo valor de
+$ |Z|$ es menor.
+
+
+\subsection{Sensibilidad}
+En cuanto a la medición de sensibilidad, el resultado obtenido difiere por 0.2 dB
+al valor de sensibilidad especificado.
+
+\subsection{Respuesta en frecuencia}
+La figura \ref{fig: fresp sheet 6m} muestra la respuesta en frecuencia especificada del BC 6MMD38-8
+
+\figura
+{fresp sheet 6m}
+{Respuesta en frecuencia especificada para el BC 6MMD38-8}
+{fig: fresp sheet 6m}
+
+En el caso del altoparlante BC 6MMD38-8, al comparar la figura
+\ref{fig: fresp sheet 6m} con la figura \ref{fig: fresp}
+se puede notar que la curva de respuesta en frecuencia obtenida mediante el método moderno
+es bastante similar a la especificada por el fabricante.
+
+Ademas, se observa que la banda de operación medida es muy similar a la especificada
+por el fabricante.
+
+La figura \ref{fig: 6MDN38-8} también demuestra mejoras en la respuesta en frecuencia
+al agregar un bafle simlpe al altoparlante.
+
+
+\subsection{Parámetros de Thiele y Small}
+La tabla \ref{tab: comparacion tys} es una extension de la tabla \ref{tab: tys}.
+Esta última incorpora los valores especificados de los Parámetros de Thiele y small
+para el BC 6MDN38-8.
+
 \tabla
-{|c|c|c|c|}
+{|l|c|c|c|}
 {
 \hline
  & Clásico & Moderno & Fabricante\\
@@ -479,10 +524,17 @@ $Bl$ [$T \cdot m$] & 15,7 & 9,852 & 10,5\\
 $C_{ms}$ [$\frac{mm}{N}$] & 0,099 & 0,086 & NA \\
 \hline
 }
-{Comparacion de los valores obtenidos y los especificados}
+{Comparación de los valores obtenidos y los especificados}
 {tab: comparacion tys}
 
-\section{Conclusión}
+En 7 de los 11 Parámetros estudiados, el resultado mas próximo al valor especificado
+fue obtenido mediante el método clásico.
+
+\subsection{Directividad}
+Lamentablemente, el fabricante no especifica la directividad de sus equipos
+por lo que la medición desarrollada no puede ser comparada.
+
+
 
 
 \printbibliography
