@@ -1,11 +1,11 @@
 \BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
-\BOOKMARK [1][-]{section.2}{Metodologia}{}% 2
+\BOOKMARK [1][-]{section.2}{metodolog\355a}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Medici\363n de Impedancia}{section.2}% 3
 \BOOKMARK [3][-]{subsubsection.2.1.1}{M\351todo moderno}{subsection.2.1}% 4
 \BOOKMARK [3][-]{subsubsection.2.1.2}{M\351todo cl\341sico}{subsection.2.1}% 5
-\BOOKMARK [2][-]{subsection.2.2}{Medicion de Sensibilidad}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.3}{Medicion de Respuesta en frecuencia}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.4}{Medicion de los parametros de Thiele y Small}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.2}{medici\363n de Sensibilidad}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{medici\363n de Respuesta en frecuencia}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.4}{medici\363n de los Par\341metros de Thiele y Small}{section.2}% 8
 \BOOKMARK [3][-]{subsubsection.2.4.1}{M\351todo cl\341sico}{subsection.2.4}% 9
 \BOOKMARK [3][-]{subsubsection.2.4.2}{M\311TODO MODERNO}{subsection.2.4}% 10
 \BOOKMARK [2][-]{subsection.2.5}{Medici\363n de la directividad}{section.2}% 11
@@ -17,5 +17,9 @@
 \BOOKMARK [2][-]{subsection.3.5}{Directividad}{section.3}% 17
 \BOOKMARK [1][-]{section.4}{An\341lisis de resultados}{}% 18
 \BOOKMARK [2][-]{subsection.4.1}{Impedancia}{section.4}% 19
-\BOOKMARK [1][-]{section.5}{Conclusi\363n}{}% 20
-\BOOKMARK [1][-]{section.6}{Referencias}{}% 21
+\BOOKMARK [2][-]{subsection.4.2}{Sensibilidad}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.3}{Respuesta en frecuencia}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.4}{Par\341metros de Thiele y Small}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.5}{Directividad}{section.4}% 23
+\BOOKMARK [1][-]{section.5}{Conclusi\363n}{}% 24
+\BOOKMARK [1][-]{section.6}{Referencias}{}% 25
