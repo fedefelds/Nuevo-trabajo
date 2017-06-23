@@ -1,6 +1,4 @@
 \documentclass[]{article}
-%\documentclass[journal,10pt,draftclsnofoot,onecolumn]{IEEEtran}
-%\usepackage{graphics,multirow,amsmath,amssymb,textcomp,subfigure,multirow,xspace,arydshln,cite}
 
 \usepackage[]{graphicx}   % para manejar graficos
 
@@ -130,18 +128,23 @@
 
 \begin{abstract}
 
-\textit{\lipsum[1]}
+\textit{En este artículo se describen las mediciones realizadas en el marco de
+la materia Electroacústica I. Se miden distintas especificaciones de dos
+parlantes utilizando dos métodos de medición diferentes. Las especificaciones medidas son:
+sensibilidad, respuesta en frecuencia, directividad, curva de impedancia y parámetros de
+Thiele y Small. En general, los resultados obtenidos son satisfactorios, ya que
+coinciden con los valores especificados por el fabricante.}
 
 \end{abstract}
 
-\vspace{1.5cm}% Additional space between abstract & rest of document
+\vspace{0.5cm}% Additional space between abstract & rest of document
 
 \begin{multicols}{2}
 \section{Introducción}
 En este trabajo se describen las mediciones realizadas en el marco de la materia
-Electroacústica I.Las mediciones son conducidas según dos métodos: Un método ``Clásico'' y otro método
+Electroacústica I. Las mediciones son conducidas según dos métodos: Un método ``Clásico'' y otro método
 moderno. Se pretende caracterizar dos parlantes en función de sus especificaciones.
-Dichas especificaciones son:
+Las especificaciones a estudiar son:
 \begin{itemize}
   \item Impedancia
   \item Sensibilidad
@@ -161,18 +164,18 @@ mediciones llevadas a cabo en este trabajo.
 \subsubsection{Método moderno}
 \label{subsec: z moderno}
 Para dicha medición se empleo el paquete de software abierto Room EQ Wizard, tambien
-conocido como REW. Dicho software requiere de un conexionado especifico, el cual
-fue implementado mediante una solucion de Hardware diseñada a medida, resultando
-en mayor agilidad a la hora de medir esta especificacion.
+conocido como REW. Dicho software requiere de un conexionado especifico que
+fue implementado mediante una solucion de Hardware diseñada a medida. Esto resulto
+en mayor agilidad a la hora de medir esta especificación.
 
-El arreglo instrumental utilizado es muy similar al descrito mas adelante,
-en la sección \ref{subsec: freq response}
+El arreglo instrumental utilizado para esta medición es muy similar al descrito
+mas adelante, en la sección \ref{subsec: freq response}.
 
 \subsubsection{Método clásico}
 \label{z clasica}
 Para dicha medición se emplea el método de la corriente constante detallado en \cite{Ruffa}
-Dicho método consiste en conectar un resistor de alto valor, entre 1 k$\Omega$ y
-2 k$\Omega$, en serie con el parlante y medir la caída de tensión en el mismo.
+Dicho método consiste en conectar un resistor de alto valor, entre $ 1 \ k\Omega$ y
+$2 \ k\Omega$,\ en serie con el parlante y medir la caída de tensión en el mismo.
 El valor relativamente alto del resistor asegura una corriente constante en el
 circuito, por lo que la variación de la tensión sobre el parlante con la frecuencia
 quedara reflejada directamente en el cambio de impedancia del parlante.
@@ -192,7 +195,7 @@ Tambien se mide la tensión sobre el resistor $V_R$ y se verifica que la misma n
 significativamente dentro del rango de frecuencias que va desde 20 Hz hasta
 500 Hz
 
-La corriente en el circuito $i_p$ esta dada por la siguiente ecuación:
+La corriente en el circuito $I_p$ esta dada por la siguiente ecuación:
 \begin{equation}
   I_p=\frac{V_R}{R}
 \end{equation}
@@ -217,13 +220,13 @@ del parlante.
 
 Una vez hallado dicho nivel, el sonometro es colocado a 1 metro de distancia del
 parlante. Para medir la sensibilidad del parlante, se mide el nivel de presion
-sonora en dicha posicicion.
+sonora en dicha posición.
 
 
 
 \subsection{medición de Respuesta en frecuencia}
 \label{sec: fresp}
-Para dicha medición solamente se recurrio al método moderno. Se coloca un
+Para dicha medición se recurrió al método moderno. Se coloca un
 micrófono de medición a una distancia de 1 metro del altoparlante.
 Por medio de una computadora y una placa de audio se genera ruido rosa.
 Para compensar la respuesta en frecuencia de dicha placa se recurrió a un lazo
@@ -242,7 +245,7 @@ mediante el paquete SMAART V7.
 En primer lugar, el parlante se  suspende en espacio libre lejos de cualquier superficie
 reflectante. Luego se mide con la mayor precision posible la resistencia de la
 Bobina movil $R_e$ y el valor de una resistencia conocida $R_{lim}$.
-Dicho reststor se conecta en serie con el parlante a medir. Este ultimo puede
+Dicho resistor se conecta en serie con el parlante a medir. Este ultimo puede
 considerarse una impedancia.
 
 Se conecta el generador en serie a este circuito y de esta manera se obtiene un
@@ -274,7 +277,7 @@ recta. Dicha figura indica que la frecuencia del generador
 es $f_s$. Con un miltimetro digital se mide la frecuencia de resonancia
 $f_s$ y la tensión en el altoparlante en resonancia $V_s$.
 
-En función de las magnitudes medidas, se define $r_o$, como la relación entre
+En función de las magnitudes medidas, se define $r_o$ como la relación entre
 la impedancia a resonancia y la resistencia de la bobina movil $R_e$:
 \begin{equation}
   r_{o}=\frac{R_{lim} \cdot V_s}{Re \cdot (V_g-V_s)}
@@ -309,6 +312,7 @@ siguiente relación:
 \end{equation}
 El valor de $f_s$ obtenido mediante la ecuación \ref{eq:verificacion} no debe
 diferir mas de 2 Hz del valor medido.
+
 Conociendo $f_1$, $f_2$ y $r_0$, es posible calcular los Parámetros de Thiele y
 Small. Para dichos cálculos se emplea una hoja de cálculo.
 
@@ -346,17 +350,17 @@ en la figura \ref{feedback}}
 En este caso, el parlante se coloca sobre una superficie giratoria diseñada para
 este tipo de mediciones. Luego, para minimizar el efecto de las reflexiones laterales
 se coloca un micrófono de referencia lo mas lejos posible de las paredes.
-Se realizan 7 mediciones, con los siguientes ángulos: 0$^\circ$, 15$^\circ$,
-30 $^\circ$, 45 $^\circ$, 60$^\circ$, 75$^\circ$ y 90$^\circ$. Para cada una se
-emite un sweep. Se asume directividad en la simetria.
+Se realizan 7 mediciones, con los siguientes ángulos: $0^\circ$, $15^\circ$,
+$30 ^\circ$, $45 ^\circ$, $60^\circ$, $75^\circ$ y $90^\circ$. Para cada una se
+emite un sweep. Se asume simetria en la directividad.
 
 La señal obtenida por el micrófono de referencia luego es procesada
 en Python y MATLAB para así obtener la directividad en tercios de octava, normalizada
-respecto a 0 $^\circ$
+respecto a 0 $^\circ$.
 
 \section{Resultados}
 
-\subsection{Impedancia}
+% \subsection{Impedancia}
 Tal como se indica indica en la sección \ref{z clasica}, la medición de impedancia según el
 método clásico resulta muy laboriosa y poco precisa en comparación con el método digital.
 Por lo tanto, resulta imposible obtener la misma
@@ -369,32 +373,32 @@ Por lo tanto, no se presento la oportunidad de emplear una caracterización
 gráfica de la impedancia del parlante BC 18TX100. Bajo dichas limitaciones,
 se estima que la primer frecuencia de resonancia es de 46,3 Hz y la segunda es
 de 151 Hz.
-
+La figura \ref{fig: 6MDN38-8} presenta la curva de impedancia medida del BC 6MDN38-8.
+La línea azul representa la curva de impedancia con masa agregada al diafragma.
 
 \figura
 {impedancia 6MDN38-8}
-{Valores obtenidos en la medición de impedancia del BC 6MDN38-8. La línea azul
-representa la curva de impedancia con masa agregada al diafragma.}
+{Valores obtenidos en la medición de impedancia del BC 6MDN38-8 según el métdo moderno. }
 {fig: 6MDN38-8}
-
-\subsection{Sensibilidad}
+% \subsection{Sensibilidad}
 La sensibilidad medida del BC 6MDN38-8 a según el procedimiento propuesto es
 de 96,2 dB SPL.
-
-\subsection{Respuesta en frecuencia}
+% \subsection{Respuesta en frecuencia}
 Tal como se indico en \ref{subsec: freq response}, la medición de respuesta en
-frecuencia del BC 6MDN38-8 fue llevada a cabo según el método digital.
-Los resultados pueden verse en la figura \ref{fig: fresp}:
+frecuencia del BC 6MDN38-8 fue llevada a cabo según el método digital. Esto
+permitio obtener una mayor cantidad de información en un menor tiempo frente al
+método clásico.La respuesta en frecuencia medida puede verse en la figura \ref{fig: fresp}.
+La línea azul corresponde a la medición con bafle simple.
+
 \figura
 {rta en frecuencia 6MDN}
-{Valores obtenidos en la medición de respuesta en frecuencia del BC 6MDN38-8.
-La línea azul corresponde a la medición con bafle simple}
+{Valores obtenidos en la medición de respuesta en frecuencia del BC 6MDN38-8.}
 {fig: fresp}
-
-\subsection{Thiele y Small}
+% \subsection{Thiele y Small}
+Como se indico anteriormente, los parámetros de Thiele y Small fueron medidos
+según dos técnicas diferentes
 La tabla \ref{tab: tys} presenta una comparación de los Parámetros de Thiele y Small
 del BC 6MD38-8 medidos:
-
 \tabla
 {|c|c|c|}
 {
@@ -426,19 +430,18 @@ $C_{ms}$ [$\frac{mm}{N}$] & 0,099 & 0,086 \\
 }
 {Comparacion de los Parámetros de Thiele y Small obtenidos mediante ambos métodos}
 {tab: tys}
-\subsection{Directividad}
+% \subsection{Directividad}
 Los resultados de la medición de directividad del BC 6MMD38-8 son presentados en
 la figura \ref{fig: directividad}
 \figura
 {directividad}
 {Directividad del BC 6MMD38-8}
 {fig: directividad}
-\vspace{0.2 cm}
 
 \section{Análisis de resultados}
 En esta sección, se comparan los resultados obtenidos con los especificados por
 el fabricante.
-\subsection{Impedancia}
+% \subsection{Impedancia}
 En el caso del altoparlante BC6MMD38-8, la impedancia fue estimada según ambos
 métodos por lo tanto no se consideraran los resultados obtenidos en el método clásico.
 
@@ -463,18 +466,17 @@ no es posible brindar una caracterización precisa de la curva de impedancia. Se
 del fabricante, el resultado obtenido difiere por un exceso de 8,3 Hz.
 
 
-Por otro lado, es evidente el
-efecto de agregar una masa al diafragma apreciable en la figura \ref{fig: 6MDN38-8} :
-En comparación con el diafragma sin masa agregada,
+Por otro lado, en la figura \ref{fig: 6MDN38-8} es evidente el
+efecto de agregar una masa al diafragma: En comparación con el diafragma sin masa agregada,
 la frecuencia de resonancia es desplazada hacia la derecha y el máximo valor de
-$ |Z|$ es menor.
+$|Z|$ es menor.
 
 
-\subsection{Sensibilidad}
+% \subsection{Sensibilidad}
 En cuanto a la medición de sensibilidad, el resultado obtenido difiere por 0.2 dB
 al valor de sensibilidad especificado.
 
-\subsection{Respuesta en frecuencia}
+% \subsection{Respuesta en frecuencia}
 La figura \ref{fig: fresp sheet 6m} muestra la respuesta en frecuencia especificada del BC 6MMD38-8
 
 \figura
@@ -494,7 +496,7 @@ La figura \ref{fig: 6MDN38-8} también demuestra mejoras en la respuesta en frec
 al agregar un bafle simlpe al altoparlante.
 
 
-\subsection{Parámetros de Thiele y Small}
+% \subsection{Parámetros de Thiele y Small}
 La tabla \ref{tab: comparacion tys} es una extension de la tabla \ref{tab: tys}.
 Esta última incorpora los valores especificados de los Parámetros de Thiele y small
 para el BC 6MDN38-8.
@@ -534,7 +536,7 @@ $C_{ms}$ [$\frac{mm}{N}$] & 0,099 & 0,086 & NA \\
 En 7 de los 11 Parámetros estudiados, el resultado mas próximo al valor especificado
 fue obtenido mediante el método clásico.
 
-\subsection{Directividad}
+% \subsection{Directividad}
 Lamentablemente, el fabricante no especifica la directividad de sus equipos
 por lo que la medición desarrollada no puede ser comparada.
 
@@ -563,7 +565,7 @@ de un parlante mediante el método clásico
 En síntesis, si bien el método clásico utilizado para medir Parámetros de Thiele y small
 resulto mas laborioso que el método computarizado, es el primero el que entrego
 mejores resultados. No se puede decir lo mismo sobre las mediciones de impedancia.
-En este caso, claramente el método digital resulto ser una gran herramienta.
+% En este caso, claramente el método digital resulto ser una gran herramienta.
 \printbibliography
 
 \end{multicols}
